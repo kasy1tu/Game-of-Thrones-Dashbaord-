@@ -1,1 +1,1 @@
-# Game-of-Thrones-Dashbaord-
+# Game-of-Thrones-Dashboard-
