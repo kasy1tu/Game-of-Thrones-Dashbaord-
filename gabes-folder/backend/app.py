@@ -24,6 +24,7 @@ def battles():
         "y": y1,
         "text": "Text about the king here?",
         "name": "Attacks"
+        
     }
 
     trace2 = {
@@ -36,6 +37,6 @@ def battles():
 
     return jsonify(data)
 
-if __name__ == '__main':
+if __name__ == '__main__':
     app.run()
     
