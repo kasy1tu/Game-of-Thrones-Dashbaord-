@@ -1,12 +1,28 @@
-/* remove default margin and padding from body */
 body {
   padding: 0;
   margin: 0;
 }
 
-/* set map, body, and html to 100% of the screen size */
 #map,
 body,
 html {
   height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.mapboxgl-popup-content {
+  padding: 1em;
+  background-color: #fcfef0;
+  color: #000;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapboxgl-popup-close-button {
+  /* color: #fff; */
+  display: none;
 }
