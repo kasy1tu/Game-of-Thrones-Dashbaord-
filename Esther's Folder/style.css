@@ -12,3 +12,17 @@ html {
 h1 {
   text-align: center;
 }
+
+.mapboxgl-popup-content {
+  padding: 1em;
+  background-color: #fcfef0;
+  color: #000;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapboxgl-popup-close-button {
+  /* color: #fff; */
+  display: none;
+}
