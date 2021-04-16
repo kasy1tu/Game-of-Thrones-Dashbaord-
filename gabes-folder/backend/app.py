@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
-from flask_cors import CORS
 import pandas as pd
+from flask_cors import CORS
 
 df = pd.read_csv("kings.csv")
 
@@ -9,6 +9,7 @@ CORS(app)
 
 @app.route("/api/battles")
 def battles():
+    print(df)
 
     y1 = []
     y2 = []
@@ -23,19 +24,22 @@ def battles():
         "x": list(df["King"]),
         "y": y1,
         "text": "Text about the king here?",
-        "name": "Attacks"
+        "name": "Attacks",
+        "type": "bar"
     }
 
     trace2 = {
         "x": list(df["King"]),
         "y": y2,
-        "name": "Defenses"
+        "text": "Text about the king here?",
+        "name": "Defenses",
+        "type": "bar"
     }
 
     data = [trace1, trace2]
 
     return jsonify(data)
 
-if __name__ == '__main':
+if __name__ == '__main__':
     app.run()
     
