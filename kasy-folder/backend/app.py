@@ -8,27 +8,27 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route("/directors")
-def directors():
+def director():
     print(df)
 
-    directors = []
+    director = []
     ratings = []
 
     for i in list(df["director"]):
-        directors.append(int(i))
-    for j in list(df["imdb_rating"]):  
-        directors.append(int(i))
+        director.append(i)
     
-
-    trace2 = {
-        "x": list(df["King"]),
-        "y": y2,
-        "text": "Text about the king here?",
-        "name": "Defenses",
+    for j in list(df["imdb_rating"]):
+        ratings.append(int(j))
+    
+    trace1 = {
+        "x": list(df["director"]),
+        "y": ratings,
+        "text": "It's working",
+        "name": "Ratings",
         "type": "bar"
     }
 
-    data = [trace1, trace2]
+    data = [trace1]
 
     return jsonify(data)
 

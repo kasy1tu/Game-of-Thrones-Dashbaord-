@@ -24,13 +24,8 @@ def battles():
         "x": list(df["King"]),
         "y": y1,
         "text": "Text about the king here?",
-<<<<<<< HEAD
         "name": "Attacks",
         "type": "bar"
-=======
-        "name": "Attacks"
-        
->>>>>>> 12ee27a3748c5c9aeb45b23a58ccf63382fd1f3f
     }
 
     trace2 = {
