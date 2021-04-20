@@ -32,6 +32,12 @@ def director():
 
     return jsonify(data)
 
+@app.route("/top_episodes")
+def top_episodes():
+    print(df)
+
+    
+
 if __name__ == '__main__':
     app.run()
     
