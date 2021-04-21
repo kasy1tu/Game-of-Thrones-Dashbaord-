@@ -34,15 +34,15 @@ def director():
 
     return jsonify(data)
 
-@app.route("/top_episodes")
-def top_episodes():
-    fig = go.Figure(data=[go.Table(
-        header = dict(values=list(top_epi_df.columns), fill_color = "paleturquoise", align="left"),
-        cells=dict(values=[top_epi_df.season, top_epi_df.number_in_season], fill_color = "lavender", align="left")
-    )])
+# @app.route("/top_episodes")
+# def top_episodes():
+#     fig = go.Figure(data=[go.Table(
+#         header = dict(values=list(top_epi_df.columns), fill_color = "paleturquoise", align="left"),
+#         cells=dict(values=[top_epi_df.season, top_epi_df.number_in_season], fill_color = "lavender", align="left")
+#     )])
 
-fig.show()
+# fig.show()
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
     
