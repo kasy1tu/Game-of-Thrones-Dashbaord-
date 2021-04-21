@@ -17,7 +17,7 @@ d3.json("http://localhost:5000/api/directors").then(function(data) {
         "barmode": "group"
     };
 
-    Plotly.newPlot("plot", data, layout);
+    Plotly.newPlot("graph", data, layout);
     
 });
 
