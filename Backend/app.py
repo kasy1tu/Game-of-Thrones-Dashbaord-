@@ -59,12 +59,11 @@ def director():
         director.append(i)
     
     for j in list(directors_df["imdb_rating"]):
-        ratings.append(int(j))
+        ratings.append(j)
     
     trace1 = {
         "x": list(directors_df["director"]),
         "y": ratings,
-        "text": "It's working",
         "name": "Ratings",
         "type": "bar"
     }
