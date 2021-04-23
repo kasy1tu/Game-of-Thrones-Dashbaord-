@@ -4,6 +4,7 @@ d3.json("http://localhost:5000/api/battles").then(function(data) {
     console.log(data)
     var layout = {
         'paper_bgcolor': 'rgba(255,255,255,0)',
+        'plot_bgcolor': 'rgba(35,33,39,.5)',
         "title": {
             text: 'Kings: Attacks & Defenses',
             font: {
@@ -23,7 +24,8 @@ d3.json("http://localhost:5000/api/battles").then(function(data) {
                 family: 'Algerian',
                 size: 14,
                 color: '#ffffff'
-            }
+            },
+            showgrid: false,
         },
         "yaxis": {
             title: 'Number of Battles',
@@ -36,7 +38,8 @@ d3.json("http://localhost:5000/api/battles").then(function(data) {
                 family: 'Algerian',
                 size: 14,
                 color: '#ffffff'
-            }
+            }, 
+            showgrid: false,
         },
         "barmode": "group"
     };
