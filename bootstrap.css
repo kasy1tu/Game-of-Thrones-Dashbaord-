@@ -49,6 +49,18 @@
   box-sizing: border-box;
 }
 
+#plot{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#graph{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 #over img {
   margin-left: auto;
   margin-right: auto;
