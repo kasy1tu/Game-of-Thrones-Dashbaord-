@@ -32,7 +32,7 @@ def battles():
         "text": attacks_texts,
         "name": "Attacks",
         "type": "bar"
-    }
+    },
 
     trace2 = {
         "x": list(kings_df["King"]),

@@ -2,6 +2,14 @@
 // Battles
 d3.json("http://localhost:5000/api/battles").then(function(data) {
     console.log(data)
+
+    var update = {
+        'marker.color': '#b8860b'
+    }
+    var update2 = {
+        'marker.color': '#808080'
+    }
+
     var layout = {
         'paper_bgcolor': 'rgba(255,255,255,0)',
         'plot_bgcolor': 'rgba(35,33,39,.5)',
@@ -10,6 +18,15 @@ d3.json("http://localhost:5000/api/battles").then(function(data) {
             font: {
                 family: 'Algerian',
                 size: 22,
+                color: '#ffffff'
+            }
+        },
+
+        "legend": {
+            "display": true,
+            font: {
+                family: 'Algerian',
+                size: 16,
                 color: '#ffffff'
             }
         },
@@ -45,14 +62,22 @@ d3.json("http://localhost:5000/api/battles").then(function(data) {
     };
 
     Plotly.newPlot("plot", data, layout);
+    Plotly.restyle("plot", update, [0]);
+    Plotly.restyle("plot", update2, [1])
+
     
 });
 
 // Directors
 d3.json("http://localhost:5000/api/directors").then(function(data) {
     console.log(data)
+
+    var update3 = {
+        'marker.color': '#b8860b'
+    }
     var layout = {
         'paper_bgcolor': 'rgba(255,255,255,0)',
+        'plot_bgcolor': 'rgba(35,33,39,.5)',
         "title": {
             text: 'Directors vs. Ratings',
             font: {
@@ -73,7 +98,9 @@ d3.json("http://localhost:5000/api/directors").then(function(data) {
                 family: 'Algerian',
                 size: 14,
                 color: '#ffffff'
-            }
+            },
+            showgrid: false,
+
         },
         "yaxis": {
             title: 'Average Rating',
@@ -81,12 +108,16 @@ d3.json("http://localhost:5000/api/directors").then(function(data) {
                 family: 'Algerian',
                 size: 19,
                 color: '#ffffff'
-            }
+            },
+            showgrid: false,
+
         }
         
     };
 
     Plotly.newPlot("graph", data, layout);
+    Plotly.restyle("graph", update3, [0]);
+
     
 });
 
