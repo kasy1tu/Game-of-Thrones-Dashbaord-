@@ -1,0 +1,105 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>season</th>
+      <th>episode_name</th>
+      <th>director</th>
+      <th>imdb_rating</th>
+      <th>notable_death_count</th>
+      <th>imdb_description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>28</th>
+      <td>3</td>
+      <td>The Rains of Castamere</td>
+      <td>David Nutter</td>
+      <td>9.9</td>
+      <td>8</td>
+      <td>Robb and Catelyn arrive at the Twins for the wedding. Jon is put to the test to see where his loyalties truly lie. Bran's group decides to split up. Daenerys plans an invasion of Yunkai.</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>5</td>
+      <td>Hardhome</td>
+      <td>Miguel Sapochnik</td>
+      <td>9.9</td>
+      <td>4</td>
+      <td>Tyrion advises Daenerys. Sansa forces Theon to tell her a secret. Cersei remains stubborn. Arya meets her first target. Jon and Tormund meet with the wildling elders.</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>6</td>
+      <td>Battle of the Bastards</td>
+      <td>Miguel Sapochnik</td>
+      <td>9.9</td>
+      <td>4</td>
+      <td>Jon and Sansa face Ramsay Bolton on the fields of Winterfell. Daenerys strikes back at her enemies. Theon and Yara arrive in Meereen.</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>6</td>
+      <td>The Winds of Winter</td>
+      <td>Miguel Sapochnik</td>
+      <td>9.9</td>
+      <td>11</td>
+      <td>Cersei and Loras Tyrell stand trial by the gods. Daenerys prepares to set sail for Westeros. Davos confronts Melisandre. Sam and Gilly arrive in the Citadel. Bran discovers a long-kept secret. Lord Frey has an uninvited guest.</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>7</td>
+      <td>The Spoils of War</td>
+      <td>Matt Shakman</td>
+      <td>9.8</td>
+      <td>0</td>
+      <td>Daenerys takes matters into her own hands. Arya reaches her destination. Jaime and Bronn collect the spoils from the war with the Tyrells.</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>6</td>
+      <td>The Door</td>
+      <td>Jack Bender</td>
+      <td>9.7</td>
+      <td>5</td>
+      <td>Sansa and Jon make plans. Arya is given another chance to prove herself. Jorah confesses a secret to Daenerys. Tyrion meets with a red priestess. Yara finds her rule tested. Bran discovers the origin of the White Walkers.</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>4</td>
+      <td>The Children</td>
+      <td>Alex Graves</td>
+      <td>9.7</td>
+      <td>4</td>
+      <td>Jon makes an important decision. Daenerys experiences new consequences. Brienne and Podrick have an unexpected encounter. Bran achieves a goal, while Tyrion makes an important discovery.</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>4</td>
+      <td>The Lion and the Rose</td>
+      <td>Alex Graves</td>
+      <td>9.7</td>
+      <td>3</td>
+      <td>Joffrey and Margaery's wedding has come. Tyrion breaks up with Shae. Ramsay tries to prove his worth to his father. Bran and company find a Weirwood tree.</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2</td>
+      <td>Blackwater</td>
+      <td>Neil Marshall</td>
+      <td>9.7</td>
+      <td>2</td>
+      <td>Stannis Baratheon's fleet and army arrive at King's Landing and the battle for the city begins. Cersei plans for her and her children's future.</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>4</td>
+      <td>The Laws of Gods and Men</td>
+      <td>Alik Sakharov</td>
+      <td>9.7</td>
+      <td>0</td>
+      <td>Tyrion's trial has come. Yara and her troops storm the Dreadfort to free Theon. Daenerys meets Hizdar zo Loraq. Stannis makes a deal with the Iron Bank of Braavos.</td>
+    </tr>
+  </tbody>
+</table>
