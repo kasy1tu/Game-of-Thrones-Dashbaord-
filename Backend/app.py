@@ -1,75 +1,75 @@
 from flask import Flask, jsonify
 import pandas as pd
 from flask_cors import CORS
+from sqlalchemy import create_engine
 
-kings_df = pd.read_csv("kings.csv")
 directors_df = pd.read_csv("director.csv")
+kings_df = pd.read_csv("kings.csv")
 
 app = Flask(__name__)
 CORS(app)
 
-# Battles for kings
 
 @app.route("/api/battles")
 def battles():
-    print(kings_df)
-
+    
     y1 = []
     y2 = []
+    kings_list = []
 
     attacks_texts = ["Robb Stark attacks", "Joffrey/Tommen attacks", "Greyjoy attacks", "Stannis Baratheon attacks", "Mance Rayder attacks", "Renly Baratheon attacks"]
     defenses_texts = ["Robb Stark defenses", "Joffrey/Tommen defenses", "Greyjoy defenses", "Stannis Baratheon defenses", "Mance Rayder defenses", "Renly Baratheon defenses"]
 
+    # for king, attacks, defenses in kings_data.fetchall():
+    #     kings_list.append(str(king))
+    #     y1.append(int(attacks))
+    #     y2.append(int(defenses))
+
+    for king in list(kings_df["King"]):
+        kings_list.append(str(king))
+    
     for i in list(kings_df["Attacks"]):
         y1.append(int(i))
-    
+
     for j in list(kings_df["Defenses"]):
         y2.append(int(j))
-    
-    trace1 = {
-        "x": list(kings_df["King"]),
-        "y": y1,
-        "text": attacks_texts,
-        "name": "Attacks",
-        "type": "bar"
-    },
 
-    trace2 = {
-        "x": list(kings_df["King"]),
-        "y": y2,
-        "text": defenses_texts,
-        "name": "Defenses",
-        "type": "bar"
-    }
-
-    data = [trace1, trace2]
-
-    return jsonify(data)
+    return jsonify([
+        {
+            "x": kings_list,
+            "y": y1,
+            "text": attacks_texts,
+            "name": "Attacks",
+            "type": "bar"
+        },
+        {
+            "x": kings_list,
+            "y": y2,
+            "text": defenses_texts,
+            "name": "Defenses",
+            "type": "bar"
+        }
+    ])
 
 # Ratings for directors
-
 @app.route("/api/directors")
+
 def director():
     print(directors_df)
-
     director = []
     ratings = []
 
     for i in list(directors_df["director"]):
         director.append(i)
-    
     for j in list(directors_df["imdb_rating"]):
         ratings.append(j)
-    
     trace1 = {
         "x": list(directors_df["director"]),
         "y": ratings,
         "name": "Ratings",
         "type": "bar"
     }
-
     data2 = [trace1]
-
     return jsonify(data2)
 
 # @app.route("/top_episodes")
@@ -81,8 +81,5 @@ def director():
 
 # fig.show()
 
-
-
 if __name__ == '__main__':
     app.run()
-    
